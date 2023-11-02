@@ -24,6 +24,7 @@ export default function HomepageDash() {
             <img
               style={{ width: "300px", height: "250px" }}
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              alt={movie.title}
             />
             <h2>{movie.title}</h2>
             <h2>{movie.overview}</h2>
