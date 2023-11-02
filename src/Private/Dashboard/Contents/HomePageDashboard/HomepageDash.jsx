@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState } from "react";
 
 export default function HomepageDash() {
@@ -15,7 +14,9 @@ export default function HomepageDash() {
   useEffect(() => {
     getMovie();
   }, []);
-  //console.log(movieList);
+
+  //console.log(favoriteMovie);
+
   return (
     <div className="max-w-6xl h-full m-auto">
       <div className="w-full h-full flex flex-wrap">
@@ -24,6 +25,7 @@ export default function HomepageDash() {
             <img
               style={{ width: "300px", height: "250px" }}
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              alt={movie.title}
             />
             <h2>{movie.title}</h2>
             <h2>{movie.overview}</h2>
