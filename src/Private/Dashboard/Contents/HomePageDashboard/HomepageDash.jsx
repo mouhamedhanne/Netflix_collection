@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState } from "react";
 
 export default function HomepageDash() {
@@ -15,7 +14,9 @@ export default function HomepageDash() {
   useEffect(() => {
     getMovie();
   }, []);
-  //console.log(movieList);
+
+  //console.log(favoriteMovie);
+
   return (
     <div className="max-w-6xl h-full m-auto">
       <div className="w-full h-full flex flex-wrap">
