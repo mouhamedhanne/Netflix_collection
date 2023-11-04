@@ -1,9 +1,13 @@
 import React from "react";
+import MovieList from "./movie/MovieList";
 
 export default function MyCollection() {
   return (
     <div>
-      <h1>Liste des collections</h1>
+      <div className="flex">
+        <h1 className="font-semibold text-2xl">Liste des collections</h1>
+      </div>
+      <MovieList />
     </div>
   );
 }
