@@ -1,4 +1,18 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import MovieList from "../movie/MovieList";
+
+export default function HomepageDash() {
+  return (
+    <div className="relative">
+      <div className="flex">
+        <h1 className="font-semibold text-2xl">Les films les plus populaire</h1>
+      </div>
+      <MovieList />
+    </div>
+  );
+}
+
+/**import { useEffect, useState } from "react";
 
 export default function HomepageDash() {
   const [movieList, setMovieList] = useState([]);
@@ -37,4 +51,4 @@ export default function HomepageDash() {
       </div>
     </div>
   );
-}
+} */

@@ -11,3 +11,17 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: rgb(219, 219, 219);
+}
