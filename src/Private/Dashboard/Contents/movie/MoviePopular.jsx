@@ -3,7 +3,7 @@ import TheMovieDb from "../API/TheMovieDb";
 import MovieCard from "./MovieCard";
 import Blur from "../../../../components/elements/blur/Blur";
 
-export default function MovieList() {
+export default function MoviePopular() {
   const [popularMovie, setPopularMovie] = useState([]);
 
   useEffect(() => {
@@ -14,6 +14,7 @@ export default function MovieList() {
 
     fetchMovie();
   }, []);
+
   return (
     <div>
       <div className="flex pb-5 px-5 pl-0 overflow-y-auto ">
