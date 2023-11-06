@@ -16,7 +16,7 @@ export default function Movie() {
   }, []);
 
   return (
-    <div>
+    <div className="relative">
       <div className="flex pb-5 px-5 pl-0 overflow-y-auto ">
         {movie.map((movie, index) => {
           return <BetterCard key={index} movie={movie} />;
@@ -41,16 +41,18 @@ export default function Movie() {
 //tendance a la tele
 //trending/tv/day
 
+//un petit soucis avec les name
 //tendance all
 //trending/all/day
 
-//serie tv populaire => le nom et la date methode change
+//serie tv populaire => le nom et la date methode change *
 //tv/popular
 
-//serie diffuser aujourdhui
+// a la tele
+//serie diffuser aujourdhui *
 //tv/airing_today
 
-//serie tv les mieux note
+//serie tv les mieux note *
 //tv/top_rated
 
 //movie/now_playing => alternative
