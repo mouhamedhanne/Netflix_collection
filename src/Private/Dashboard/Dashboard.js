@@ -20,15 +20,15 @@ export default function Dashboard() {
                       to="/dashboard"
                       class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                     >
-                      Dashboard
+                      Films
                     </Link>
 
                     <Link
-                      to="/dashboard/mes-collections"
+                      to="/dashboard/Series-Tv"
                       class="text-gray-300 hover:bg-gray-700 hover:text-white
                     rounded-md px-3 py-2 text-sm font-medium"
                     >
-                      Mes Collections
+                      Series / Tv
                     </Link>
 
                     <Link
