@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import Logo from "../../components/elements/marketing/Logo";
+import FooterDasboard from "./Contents/footer/FooterDasboard";
 
 export default function Dashboard() {
   return (
@@ -32,11 +33,11 @@ export default function Dashboard() {
                     </Link>
 
                     <Link
-                      to="/dashboard/ajouter-une-collection"
+                      to="/dashboard/mes-favoris"
                       class="text-gray-300 hover:bg-gray-700 hover:text-white
                      rounded-md px-3 py-2 text-sm font-medium"
                     >
-                      Nouvelle Collection
+                      Mes Favoris
                     </Link>
                     {/** */}
                     <form
@@ -295,6 +296,7 @@ export default function Dashboard() {
             </div>
             {/**<!-- Your content --> */}
           </div>
+          <FooterDasboard />
         </main>
       </div>
     </div>

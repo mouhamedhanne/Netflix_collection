@@ -2,7 +2,7 @@ import React from "react";
 import ProgressCircle from "../../../../components/elements/progress-circle/ProgressCircle";
 import Ellipsis from "../../../../components/elements/ellipsis/Ellipsis";
 
-export default function MovieCard({ popular, movie }) {
+export default function MovieCard({ popular }) {
   return (
     <div>
       <div className="flex flex-col pl-5 pr-0 gap-2">

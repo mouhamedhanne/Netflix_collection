@@ -17,7 +17,7 @@ export default function MoviePopular() {
 
   return (
     <div>
-      <div className="flex pb-5 px-5 pl-0 overflow-y-auto ">
+      <div className="flex px-5 pl-0 overflow-y-auto ">
         {popularMovie.map((popular, index) => {
           return <MovieCard key={index} popular={popular} />;
         })}

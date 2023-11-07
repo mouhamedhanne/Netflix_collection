@@ -10,13 +10,13 @@ import Page404 from "./pages/page404/Page404";
 import { Toaster } from "react-hot-toast";
 import { UserContextProvider } from "./pages/Login/Auth/AuthContext";
 import Dashboard from "./Private/Dashboard/Dashboard";
-import AddCollection from "./Private/Dashboard/Contents/AddCollection";
 import PrivateRoute from "./Private/PrivateRoute";
 import SupportContact from "./pages/SupportContact/SupportContact";
 import Demonstration from "./pages/Demo/Demonstration";
 import Homepage from "./Private/Dashboard/Contents/HomePageDashboard/HomepageDash";
 import HomepageDash from "./Private/Dashboard/Contents/HomePageDashboard/HomepageDash";
 import SeriesTv from "./Private/Dashboard/Contents/SeriesTv";
+import MesFavoris from "./Private/Dashboard/Contents/MesFavoris";
 
 const router = createBrowserRouter([
   {
@@ -68,8 +68,8 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/dashboard/ajouter-une-collection",
-        element: <AddCollection />,
+        path: "/dashboard/mes-favoris",
+        element: <MesFavoris />,
       },
     ],
   },
