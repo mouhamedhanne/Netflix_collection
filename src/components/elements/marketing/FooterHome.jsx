@@ -66,11 +66,9 @@ export default function FooterHome() {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center ">
-            © 2023 NetflixCollection™ . All Rights Reserved.
-          </span>
+          <Logo logo="logo-footer" />
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <Link>Powered by GEEK GENIUS</Link>
+            <Link>Powered by Mouhamed Hanne</Link>
           </div>
         </div>
       </footer>
