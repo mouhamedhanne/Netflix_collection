@@ -20,7 +20,6 @@ export default function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(inputs);
 
     //Validation des inputs
     if (inputs.current[1] && inputs.current[2]) {
@@ -56,7 +55,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="bg-bg_page_acceuil ">
+    <div className="h-[100vh] bg-bg_page_acceuil ">
       <div
         className="flex flex-col items-center justify-center px-6 py-8
        mx-auto md:h-screen lg:py-0"

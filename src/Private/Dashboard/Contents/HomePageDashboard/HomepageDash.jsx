@@ -6,8 +6,7 @@ import Upcoming from "../movie/upcoming/Upcoming";
 
 export default function HomepageDash() {
   return (
-    <div className="relative">
-      <div className="flex"></div>
+    <div className="relative ">
       <div className="">
         <div>
           <h1 className="pl-6 pb-4 font-semibold text-2xl">
