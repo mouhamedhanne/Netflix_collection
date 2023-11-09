@@ -21,7 +21,6 @@ export default function SignIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(inputs);
 
     try {
       const cred = await signIn(
@@ -34,16 +33,14 @@ export default function SignIn() {
 
       //console.log(cred);
       toast.success("Connexion reussi");
-      console.log("connexion reuissi vous etes sur votre dashboard");
       navigate("/dashboard");
     } catch {
       toast.error("email et/ou mot de pass incorrect !");
-      console.log("connexion non reuissi");
     }
   };
 
   return (
-    <div className="bg-bg_page_acceuil ">
+    <div className="h-[100vh] bg-bg_page_acceuil ">
       <div
         className="flex flex-col items-center justify-center px-6 py-8 mx-auto
          md:h-screen lg:py-0"
@@ -138,7 +135,7 @@ export default function SignIn() {
                     focus:ring-4 focus:outline-none focus:ring-primary-300
                     font-medium rounded-lg text-sm px-5 py-2.5 text-center "
               >
-                Sign in
+                Se Connecter
               </button>
               <p className="text-sm font-light text-gray-500 ">
                 Vous n'avez pas encore de compte?{" "}

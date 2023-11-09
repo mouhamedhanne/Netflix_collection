@@ -4,10 +4,9 @@ import { Outlet, useLocation, Navigate } from "react-router-dom";
 
 export default function PrivateRoute({ children }) {
   const { currentUser } = useContext(UserContext);
-  console.log("PRIVATE", currentUser);
 
   if (!currentUser) {
-    return <Navigate to="/inscription" />;
+    return <Navigate to="/" />;
   }
 
   return <div>{children}</div>;

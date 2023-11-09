@@ -8,7 +8,7 @@ import FooterHome from "../../components/elements/marketing/FooterHome";
 export default function HomePage() {
   return (
     <div>
-      <div className="bg-bg_page_acceuil">
+      <div className=" bg-bg_page_acceuil">
         <div className="max-w-6xl h-full m-auto">
           <Herotop />
         </div>

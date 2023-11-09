@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DasbordImage from "../../../media/images/dashbord-image.jpg";
+import DashboardImage from "../../../media/images/dashboard-image.png";
 
 export default function CtaSection() {
   return (
@@ -8,7 +8,7 @@ export default function CtaSection() {
       <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
         <img
           className="w-full dark:hidden"
-          src={DasbordImage}
+          src={DashboardImage}
           alt="dashboard presentation"
         />
 
