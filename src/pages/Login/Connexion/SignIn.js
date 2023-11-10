@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../../components/elements/marketing/Logo";
 import { useRef, useContext } from "react";
 import { UserContext } from "../Auth/AuthContext";
@@ -9,6 +9,8 @@ import toast from "react-hot-toast";
 export default function SignIn() {
   const { signIn } = useContext(UserContext);
   const navigate = useNavigate();
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const inputs = useRef([]);
   const addInputs = (elements) => {
@@ -21,6 +23,8 @@ export default function SignIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     try {
       const cred = await signIn(
@@ -36,6 +40,8 @@ export default function SignIn() {
       navigate("/dashboard");
     } catch {
       toast.error("email et/ou mot de pass incorrect !");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -131,11 +137,12 @@ export default function SignIn() {
               </div>
               <button
                 type="submit"
-                className="w-full text-white bg-mauve_primary
-                    focus:ring-4 focus:outline-none focus:ring-primary-300
-                    font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+                className={`w-full text-white bg-mauve_primary
+                focus:ring-4 focus:outline-none focus:ring-primary-300
+                font-medium rounded-lg text-sm px-5 py-2.5 text-center 
+                ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}
               >
-                Se Connecter
+                {isLoading ? "Chargement..." : "Se Connecter"}
               </button>
               <p className="text-sm font-light text-gray-500 ">
                 Vous n'avez pas encore de compte?{" "}

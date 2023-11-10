@@ -6,7 +6,7 @@ export default function ButtonHeroTop({ children, theme }) {
       return (
         <div>
           <button
-            className="text-white px-10 py-2 uppercase rounded-md text-sm
+            className="text-white px-4 sm:px-10 py-2 uppercase rounded-md text-sm
            bg-mauve_primary mr-4 tracking-widest"
           >
             {children}
@@ -19,7 +19,7 @@ export default function ButtonHeroTop({ children, theme }) {
         <div>
           <button
             className="text-mauve_primary px-10 py-2 uppercase rounded-md text-sm
-             bg-gris_primary mr-4 tracking-widest"
+             bg-gris_primary mr-4 tracking-widest hidden sm:block"
           >
             {children}
           </button>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../../components/elements/marketing/Logo";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef, useContext } from "react";
@@ -8,6 +8,10 @@ import { UserContext } from "../Auth/AuthContext";
 export default function SignUp() {
   const { signUp } = useContext(UserContext);
   const navigate = useNavigate();
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const inputs = useRef([]);
   const addInputs = (elements) => {
@@ -34,6 +38,13 @@ export default function SignUp() {
       }
     }
 
+    if (!isChecked) {
+      toast.error("Veuillez accepter les termes et conditions");
+      return;
+    }
+
+    setIsLoading(true);
+
     try {
       const cred = await signUp(
         inputs.current[0].value,
@@ -42,7 +53,7 @@ export default function SignUp() {
 
       formRef.current.reset();
       //console.log(cred);
-      toast.success("Inscription reussi");
+      toast.success("Inscription reussi.");
       navigate("/dashboard");
     } catch (err) {
       if (err.code === "auth/invalid-email") {
@@ -51,6 +62,8 @@ export default function SignUp() {
       if (err.code === "auth/email-already-in-use") {
         toast.error("Cette adresse email est deja utiliser !");
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -146,6 +159,7 @@ export default function SignUp() {
                     className="w-4 h-4 border border-gray-300 rounded bg-gray-50
                      focus:ring-3 focus:ring-primary-300 "
                     required=""
+                    onChange={() => setIsChecked(!isChecked)}
                   />
                 </div>
                 <div className="ml-3 text-sm">
@@ -164,11 +178,12 @@ export default function SignUp() {
 
               <button
                 type="submit"
-                className="w-full text-white bg-mauve_primary
-                 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium
-                  rounded-lg text-sm px-5 py-2.5 text-center "
+                className={`w-full text-white bg-mauve_primary
+                focus:ring-4 focus:outline-none focus:ring-primary-300
+                 font-medium rounded-lg text-sm px-5 py-2.5 text-center
+                 ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}
               >
-                Créer Un Compte
+                {isLoading ? "Chargement..." : "Créer Un Compte"}
               </button>
               <p className="text-sm font-light text-gray-500 ">
                 Vous avez déjà un compte?{" "}

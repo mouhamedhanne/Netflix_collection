@@ -5,7 +5,7 @@ export default function Logo({ logo }) {
     case "logo-principal":
       return (
         <div>
-          <h1 className="m-5 text-3xl text-red_primary font-extrabold underline ">
+          <h1 className="m-5 text-[20px] sm:text-3xl text-red_primary font-extrabold underline ">
             NetflixCollection
           </h1>
         </div>
