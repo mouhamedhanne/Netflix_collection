@@ -13,7 +13,6 @@ import Dashboard from "./Private/Dashboard/Dashboard";
 import PrivateRoute from "./Private/PrivateRoute";
 import SupportContact from "./pages/SupportContact/SupportContact";
 import Demonstration from "./pages/Demo/Demonstration";
-import Homepage from "./Private/Dashboard/Contents/HomePageDashboard/HomepageDash";
 import HomepageDash from "./Private/Dashboard/Contents/HomePageDashboard/HomepageDash";
 import SeriesTv from "./Private/Dashboard/Contents/SeriesTv";
 import MesFavoris from "./Private/Dashboard/Contents/MesFavoris";

@@ -19,10 +19,10 @@ export default function CtaSection() {
           <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
             Regardez notre vidéo de démonstration pour une visite guidée de
             NetflixCollection. Découvrez comment notre application révolutionne
-            la gestion de votre collection de films et series sur Netflix. Voyez
-            comment vous pouvez organiser, personnaliser et explorer votre
-            propre salle de cinéma virtuelle en un clin d'œil. Préparez-vous à
-            transformer votre expérience Netflix comme jamais auparavant.
+            votre expérience cinématographique. Voyez comment vous pouvez
+            explorer, personnaliser et trouver vos films et séries TV préférés
+            en un clin d'œil. Préparez-vous à transformer votre expérience de
+            découverte de films comme jamais auparavant.
           </p>
           <div className="flex items-center">
             <Link to="/inscription">

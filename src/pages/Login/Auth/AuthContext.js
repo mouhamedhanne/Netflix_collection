@@ -3,14 +3,29 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  sendEmailVerification,
 } from "firebase/auth";
 import { auth } from "../../../firebase-config";
 
 export const UserContext = createContext();
 
 export function UserContextProvider(props) {
-  const signUp = (email, password) =>
-    createUserWithEmailAndPassword(auth, email, password);
+  const signUp = async (email, password) => {
+    try {
+      const userCredentiel = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      await sendEmailVerification(userCredentiel.user);
+
+      return userCredentiel;
+    } catch (error) {
+      throw error;
+    }
+  };
+
   const signIn = (email, password) =>
     signInWithEmailAndPassword(auth, email, password);
 

@@ -16,7 +16,8 @@ export default function DownloadApp() {
             New
           </span>
           <span className="text-sm font-medium">
-            NetflixCollection App est sorti ! Regardez ce qu'il y a de nouveau
+            NetflixCollection sera bientôt disponible sur PlayStore et AppStore
+            !
           </span>
           <svg
             className="ml-2 w-5 h-5"
@@ -32,23 +33,27 @@ export default function DownloadApp() {
           </svg>
         </a>
         <h2
-          className="mb-4 text-2xl font-bold tracking-tight leading-none
-         text-gray-700 md:text-5xl lg:text-5xl "
+          className="mb-4 text-4xl font-bold tracking-tight leading-none
+         text-gray-700  hidden sm:block "
         >
           Télécharger la version mobile
         </h2>
 
         <div
-          className="flex flex-col mt-12 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center
-         sm:space-y-0 sm:space-x-4"
+          className="flex  mt-12 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center
+         sm:space-y-0 sm:space-x-4 "
         >
           <img
+            style={{ width: "140px" }}
             src={IllustrationAppStore}
             alt="télécharger l'application sur appStore"
+            className="hidden sm:block"
           />
           <img
+            style={{ width: "140px" }}
             src={IllustrationPlayStore}
             alt="télécharger l'application sur playStore"
+            className="hidden sm:block"
           />
         </div>
       </div>
