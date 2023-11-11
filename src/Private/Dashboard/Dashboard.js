@@ -5,6 +5,7 @@ import FooterDasboard from "./Contents/footer/FooterDasboard";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase-config";
 import { Navigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function Dashboard() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,6 +17,7 @@ export default function Dashboard() {
   const logOut = async () => {
     try {
       await signOut(auth);
+      toast.success("Déconnexion réussie");
       Navigate("");
     } catch {
       //
@@ -24,27 +26,27 @@ export default function Dashboard() {
 
   return (
     <div>
-      <div class="min-h-full">
-        <nav class="bg-gray-800">
-          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex h-16 items-center justify-between">
-              <div class="flex items-center">
-                <div class="flex-shrink-0">
+      <div className="min-h-full">
+        <nav className="bg-gray-800">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-16 items-center justify-between">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
                   <Logo logo="logo-dashboard" />
                 </div>
-                <div class="hidden md:block">
-                  <div class="ml-10 flex items-baseline space-x-4">
+                <div className="hidden md:block">
+                  <div className="ml-10 flex items-baseline space-x-4">
                     {/**Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                     <Link
                       to="/dashboard"
-                      class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                      className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                     >
                       Films
                     </Link>
 
                     <Link
                       to="/dashboard/Series-Tv"
-                      class="text-gray-300 hover:bg-gray-700 hover:text-white
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white
                     rounded-md px-3 py-2 text-sm font-medium"
                     >
                       Series / Tv
@@ -52,7 +54,7 @@ export default function Dashboard() {
 
                     <Link
                       to="/dashboard/mes-favoris"
-                      class="text-gray-300 hover:bg-gray-700 hover:text-white
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white
                      rounded-md px-3 py-2 text-sm font-medium"
                     >
                       Mes Favoris
@@ -61,15 +63,15 @@ export default function Dashboard() {
                     <form
                       action="#"
                       method="GET"
-                      class="hidden md:block md:pl-2"
+                      className="hidden md:block md:pl-2"
                     >
-                      <label for="topbar-search" class="sr-only">
+                      <label for="topbar-search" className="sr-only">
                         Search
                       </label>
-                      <div class="relative md:w-64 md:w-52">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                      <div className="relative md:w-64 md:w-52">
+                        <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                           <svg
-                            class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                            className="w-5 h-5 text-gray-500 dark:text-gray-400"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +86,7 @@ export default function Dashboard() {
                         <input
                           type="text"
                           id="topbar-search"
-                          class="bg-gray-50 border outline-none text-gray-900 text-sm
+                          className="bg-gray-50 border outline-none text-gray-900 text-sm
                           rounded-lg   block w-full pl-10 p-1.5"
                           placeholder="Search"
                         />
@@ -95,8 +97,8 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div class="hidden md:block">
-                <div class="ml-4 flex items-center md:ml-6">
+              <div className="hidden md:block">
+                <div className="ml-4 flex items-center md:ml-6">
                   {/**<!-- Profile dropdown --> */}
                   <div>
                     <button
@@ -139,17 +141,17 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div class="-mr-2 flex md:hidden">
+              <div className="-mr-2 flex md:hidden">
                 {/**<!-- Mobile menu button --> */}
                 <button
                   onClick={toggleMenu}
                   type="button"
-                  class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   aria-controls="mobile-menu"
                   aria-expanded="false"
                 >
                   <svg
-                    class="block h-6 w-6"
+                    className="block h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
@@ -169,8 +171,8 @@ export default function Dashboard() {
 
           {/** <!-- Mobile menu, show/hide based on menu state. --> */}
           {menuOpen && (
-            <div class="md:hidden" id="mobile-menu">
-              <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+            <div className="md:hidden" id="mobile-menu">
+              <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                 {/** <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                 <Link
                   to="/dashboard"
@@ -197,8 +199,8 @@ export default function Dashboard() {
                   Mes Favoris
                 </Link>
               </div>
-              <div class="border-t border-gray-700 pb-3 pt-4">
-                <div class="mt-3 space-y-1 px-2">
+              <div className="border-t border-gray-700 pb-3 pt-4">
+                <div className="mt-3 space-y-1 px-2">
                   <button
                     onClick={logOut}
                     className="block rounded-md px-4 py-2 text-base font-medium
@@ -226,15 +228,15 @@ export default function Dashboard() {
           )}
         </nav>
 
-        <header class="bg-white shadow">
-          <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+        <header className="bg-white shadow">
+          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
               Dashboard
             </h1>
           </div>
         </header>
         <main>
-          <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             <div>
               <Outlet />
             </div>

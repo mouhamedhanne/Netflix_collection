@@ -16,6 +16,8 @@ import Demonstration from "./pages/Demo/Demonstration";
 import HomepageDash from "./Private/Dashboard/Contents/HomePageDashboard/HomepageDash";
 import SeriesTv from "./Private/Dashboard/Contents/SeriesTv";
 import MesFavoris from "./Private/Dashboard/Contents/MesFavoris";
+import Confidentiality from "./MentionLegal/Confidentiality";
+import TermAndConditions from "./MentionLegal/TermAndConditions";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,16 @@ const router = createBrowserRouter([
   {
     path: "/demonstration",
     element: <Demonstration />,
+  },
+
+  {
+    path: "/confidentiality",
+    element: <Confidentiality />,
+  },
+
+  {
+    path: "/termes-et-conditions",
+    element: <TermAndConditions />,
   },
 
   {

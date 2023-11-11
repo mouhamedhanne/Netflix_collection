@@ -32,7 +32,7 @@ export default function SignUp() {
 
       if (valuePassword.length < 6 || valueConfirmPassword.length < 6) {
         //setValidation("6 carateres min");
-        toast.error("6 caracteres min");
+        toast.error("Le mot de passe doit contenir 6 caractères minimum");
       } else if (valuePassword !== valueConfirmPassword) {
         toast.error("Les mots de passe ne correspondent pas");
       }
@@ -53,14 +53,14 @@ export default function SignUp() {
 
       formRef.current.reset();
       //console.log(cred);
-      toast.success("Inscription reussi.");
+      toast.success("Inscription réussie");
       navigate("/dashboard");
     } catch (err) {
       if (err.code === "auth/invalid-email") {
-        toast.error("Adresse email invalide");
+        toast.error("Adresse e-mail invalide");
       }
       if (err.code === "auth/email-already-in-use") {
-        toast.error("Cette adresse email est deja utiliser !");
+        toast.error("Cette adresse e-mail est déjà utilisée !");
       }
     } finally {
       setIsLoading(false);
@@ -117,7 +117,7 @@ export default function SignUp() {
                   for="password"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Mot De Passe
+                  Mot de Passe
                 </label>
                 <input
                   type="password"
@@ -136,14 +136,14 @@ export default function SignUp() {
                   for="confirm-password"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Confirmer Votre Mot De Passe
+                  Confirmer votre Mot de Passe
                 </label>
                 <input
                   type="password"
                   name="confirm-password"
                   id="confirm-password"
                   ref={addInputs}
-                  placeholder="confirmer Mot De Passe"
+                  placeholder="confirmer votre Mot de Passe"
                   className="bg-gray-50 border border-gray-300 text-gray-900
                    sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600
                     block w-full p-2.5 "
