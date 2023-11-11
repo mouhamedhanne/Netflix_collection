@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 export default function FooterHome() {
   return (
     <>
-      <footer className="p-4 bg-white sm:p-6 ">
+      <footer className="p-4 bg-white sm:p-6 border-t-4">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0 flex items-center">
-            <Logo logo="logo-footer" />
+            <Logo logo="logo-principal" />
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -34,13 +34,19 @@ export default function FooterHome() {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <Link to="" className="hover:underline ">
+                  <Link
+                    to="https://www.instagram.com/geek___genius/"
+                    className="hover:underline "
+                  >
                     Instagram
                   </Link>
                 </li>
                 <li>
-                  <Link to="" className="hover:underline">
-                    Youtube
+                  <Link
+                    to="https://twitter.com/MouhamedHanne13"
+                    className="hover:underline"
+                  >
+                    Twitter
                   </Link>
                 </li>
               </ul>
@@ -51,12 +57,12 @@ export default function FooterHome() {
               </h2>
               <ul className="text-gray-600">
                 <li className="mb-4">
-                  <Link to="" class="hover:underline">
-                    Privacy Policy
+                  <Link to="/confidentiality" class="hover:underline">
+                    Politique de confidentialité
                   </Link>
                 </li>
                 <li>
-                  <Link to="" className="hover:underline">
+                  <Link to="/termes-et-conditions" className="hover:underline">
                     Terms &amp; Conditions
                   </Link>
                 </li>
@@ -68,7 +74,9 @@ export default function FooterHome() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <Logo logo="logo-footer" />
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <Link>Powered by Mouhamed Hanne</Link>
+            <Link to="https://github.com/mouhamedhanne">
+              Powered by Mouhamed Hanne
+            </Link>
           </div>
         </div>
       </footer>

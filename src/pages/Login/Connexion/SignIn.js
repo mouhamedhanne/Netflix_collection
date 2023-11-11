@@ -36,10 +36,10 @@ export default function SignIn() {
       formRef.current.reset();
 
       //console.log(cred);
-      toast.success("Connexion reussi");
+      toast.success("Connexion réussie");
       navigate("/dashboard");
     } catch {
-      toast.error("email et/ou mot de pass incorrect !");
+      toast.error("Email et/ou mot de passe incorrect(s) !");
     } finally {
       setIsLoading(false);
     }
@@ -93,7 +93,7 @@ export default function SignIn() {
                   className="block mb-2 text-sm font-medium
                        text-gray-900 dark:text-white"
                 >
-                  Mot De Passe
+                  Mot de Passe
                 </label>
                 <input
                   ref={addInputs}

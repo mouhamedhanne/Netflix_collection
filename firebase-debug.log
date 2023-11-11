@@ -1,0 +1,21 @@
+[debug] [2023-11-11T19:17:50.303Z] ----------------------------------------------------------------------
+[debug] [2023-11-11T19:17:50.309Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\UZER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-11-11T19:17:50.310Z] CLI Version:   12.8.1
+[debug] [2023-11-11T19:17:50.312Z] Platform:      win32
+[debug] [2023-11-11T19:17:50.313Z] Node Version:  v18.17.1
+[debug] [2023-11-11T19:17:50.317Z] Time:          Sat Nov 11 2023 19:17:50 GMT+0000 (heure moyenne de Greenwich)
+[debug] [2023-11-11T19:17:50.317Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-11T19:17:50.336Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-11T19:17:50.336Z] > authorizing via signed-in user (mouhamedhanne72@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\UZER\Desktop\Netflix_collection
+
