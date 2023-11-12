@@ -3,12 +3,12 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: "AIzaSyC-BAAHClMmQ4UMBZoxieMbKQ886Q_TQ5M",
+  authDomain: "netflixcollection-d2448.firebaseapp.com",
+  projectId: "netflixcollection-d2448",
+  storageBucket: "netflixcollection-d2448.appspot.com",
+  messagingSenderId: 919970792945,
+  appId: "1:919970792945:web:aff7655fc82326dcbef050",
   measurementId: "G-1YVKK2LT9K",
 };
 
