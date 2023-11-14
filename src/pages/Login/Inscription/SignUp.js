@@ -35,6 +35,7 @@ export default function SignUp() {
         toast.error("Le mot de passe doit contenir 6 caractères minimum");
       } else if (valuePassword !== valueConfirmPassword) {
         toast.error("Les mots de passe ne correspondent pas");
+        return;
       }
     }
 
