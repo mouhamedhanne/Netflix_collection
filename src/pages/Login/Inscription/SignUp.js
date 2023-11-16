@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useRef, useContext } from "react";
 import toast from "react-hot-toast";
 import { UserContext } from "../Auth/AuthContext";
+import confetti from "canvas-confetti";
 
 export default function SignUp() {
   const { signUp } = useContext(UserContext);
@@ -56,6 +57,7 @@ export default function SignUp() {
       //console.log(cred);
       toast.success("Inscription réussie");
       navigate("/dashboard");
+      confetti();
     } catch (err) {
       if (err.code === "auth/invalid-email") {
         toast.error("Adresse e-mail invalide");
